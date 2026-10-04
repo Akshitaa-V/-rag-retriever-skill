@@ -1,0 +1,30 @@
+Retrieval-Augmented Generation (RAG) is a technique that combines a retrieval
+system with a generative language model. Instead of relying only on what the
+model learned during training, RAG first searches an external knowledge base
+for relevant text chunks, then passes those chunks to the model as additional
+context before generating an answer. This reduces hallucination and allows
+the model to answer questions about information it was never trained on.
+
+A typical RAG pipeline has three stages: indexing, retrieval, and generation.
+In the indexing stage, documents are split into smaller chunks and converted
+into numerical vectors called embeddings. In the retrieval stage, a user's
+query is also converted into an embedding and compared against the stored
+document embeddings using a similarity measure such as cosine similarity.
+The most similar chunks are retrieved. In the generation stage, the retrieved
+chunks are inserted into the prompt sent to the language model, giving it
+grounded context to base its answer on.
+
+Context engineering refers to the practice of deliberately deciding what
+information to include in a model's context window, in what order, and in
+what format, so that the model produces the most accurate and relevant
+response. This includes selecting which retrieved chunks to keep, trimming
+irrelevant text, adding instructions, and structuring the prompt so the
+model can clearly distinguish between background information, the user's
+question, and the instructions it should follow.
+
+Prompting is the practice of writing instructions for a language model in a
+way that reliably produces the desired output. Good prompting often includes
+clear task descriptions, relevant examples, explicit formatting instructions,
+and constraints. Prompting and context engineering work together: prompting
+shapes how the model should respond, while context engineering shapes what
+information the model has available when responding.

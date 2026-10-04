@@ -1,0 +1,31 @@
+A skill for an AI coding assistant is a reusable capability the assistant can
+load to perform a specific task. A skill is typically a folder containing a
+SKILL.md file that describes when the skill should be used and how, plus any
+supporting scripts or reference files it needs. When a task matches the
+description in a SKILL.md file, the assistant reads that file first and
+follows its instructions before writing any code. Skills let teams package
+domain-specific best practices, house style, or repeatable workflows so that
+every developer benefits from the same proven approach instead of
+re-deriving it each time.
+
+A hook is a way to run custom logic automatically at specific points in an
+assistant's workflow, such as before or after a tool is used, or when a
+session starts or ends. Hooks let a team enforce checks, logging, or side
+effects without relying on the model to remember them, since the hook fires
+automatically based on the event rather than on a model decision.
+
+The Model Context Protocol, or MCP, is an open protocol that standardizes how
+applications provide context, tools, and data to large language models. An
+MCP server exposes a set of tools, resources, or prompts over a common
+interface, and any MCP-compatible client can connect to that server and call
+its tools without custom integration code for every new data source. This
+means a company can build one MCP server for an internal system, such as a
+ticketing tool or a database, and any MCP-compatible assistant can use it
+immediately, instead of writing a separate integration for each assistant.
+
+Benchmarking a language model or an AI solution means running it against a
+fixed set of test inputs and comparing its outputs against expected results
+or against the outputs of other models, using consistent metrics such as
+accuracy, latency, or relevance score. Good benchmarking practice keeps the
+test set, the metrics, and the comparison method fixed so that results
+across different models or prompt versions are directly comparable.
